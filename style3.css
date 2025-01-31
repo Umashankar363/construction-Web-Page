@@ -1,0 +1,361 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 150px;
+    margin-right: 10px;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 2em;
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 1em;
+    color: goldenrod;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.info-item strong {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.nav-bar {
+    background-color: #2b9ed7; /* Deep blue */
+    padding: 10px 30px;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    margin: 0 20px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a:focus {
+    color: goldenrod;
+}
+
+.nav-bar ul li a.active {
+    color: goldenrod; /* Highlight active link */
+}
+
+/* Ensuring proper responsiveness */
+@media screen and (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+    }
+
+    .nav-bar ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .nav-bar ul li {
+        margin: 10px 10px;
+    }
+}
+
+/* Team Section */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;  /* Adjusted margin for better spacing */
+    color: #333;
+    text-align: center;  /* Center the heading */
+}
+
+.team-grid {
+    display: flex;  /* Use flexbox to align cards from left to right */
+    gap: 1.5rem;  /* Add space between cards */
+    flex-wrap: wrap;  /* Allow the items to wrap if they exceed the container width */
+    justify-content: flex-start; /* Align items from left */
+    padding: 0 1rem;
+}
+
+/* Card Styling */
+.team-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #ffffff;
+    flex: 1 1 250px;  /* Ensures each card has a minimum width of 250px */
+    max-width: 300px;  /* Set a maximum width for the cards */
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.2);
+}
+
+/* Overlay with Details */
+.team-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 26, 77, 0.9);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-details {
+    transform: translateY(0);
+}
+
+.team-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #ffcc00;
+}
+
+.team-details p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid {
+        justify-content: center;  /* Center align cards on smaller screens */
+    }
+
+    .team-card img {
+        height: 200px;
+    }
+
+    .team-details h3 {
+        font-size: 1rem;
+    }
+
+    .team-details p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2C237E; /* Deep purple background */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif; /* Clean font family */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Center-aligns vertically */
+    gap: 20px; /* Adds spacing between items */
+}
+
+/* Logo Section (Big Logo on the Right) */
+.footer-logo {
+    flex: 1 1 25%; /* Takes half the space */
+    text-align: center; /* Pushes logo to the right */
+}
+
+.footer-logo img {
+    max-width: 250px; /* Bigger logo size */
+    margin-bottom: 15px;
+}
+
+.footer-logo h3 {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #D4AF37; /* Gold color */
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+.footer-links {
+    flex: 1 1 200px; /* Takes up space and adapts on smaller screens */
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #D4AF37; /* Gold on hover */
+}
+
+/* Contact Info */
+.footer-contact {
+    flex: 1 1 300px; /* Wider section for contact info */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-contact h4 {
+    color: #FFD700; /* Bright gold */
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-contact p, .footer-contact a {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+/* Social Media Icons */
+.footer-social {
+    flex: 1 1 100%; /* Full width for icons at the bottom */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-social a img {
+    max-width: 30px; /* Size of the icons */
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    flex: 1 1 100%;
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #ccc;
+}
+
+.footer-bottom .highlight {
+    color: #FFD700; /* Bright gold */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        text-align: center; /* Center the logo on smaller screens */
+    }
+
+    .footer-contact, .footer-links {
+        text-align: center;
+    }
+}
