@@ -37,7 +37,7 @@ function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
         currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
         showSlide(currentIndex);
-    }, 500); // Auto-slide interval set to 5 seconds
+    }, 5000); // Auto-slide interval set to 5 seconds
 }
 
 // Reset the auto-slide timer when manually interacted with carousel
